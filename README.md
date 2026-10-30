@@ -11,7 +11,27 @@
   <img src="https://img.shields.io/badge/Platform-Android-3DDC84?style=for-the-badge&logo=android&logoColor=white&labelColor=2d2d2d" alt="Platform" />
 </p>
 
+<p align="center">
+  <a href="https://github.com/Harirajhari/Your-muisc/releases/latest/download/YourMusic-v4.3.1-release.apk">
+    <img src="https://img.shields.io/badge/Direct%20Download-APK%20(v4.3.1)-1DB954?style=for-the-badge&logo=android&logoColor=white" height="48" alt="Direct Download APK" />
+  </a>
+  &nbsp;
+  <a href="https://github.com/Harirajhari/Your-muisc/releases/latest">
+    <img src="https://img.shields.io/badge/All%20Releases-GitHub-222222?style=for-the-badge&logo=github&logoColor=white" height="48" alt="GitHub Releases" />
+  </a>
+</p>
+
 </div>
+
+---
+
+## 📥 Direct Download & Install
+
+| Package | Download Link | Notes |
+|:---|:---|:---|
+| **Your Music APK (Latest)** | [**⬇️ Download YourMusic-v4.3.1-release.apk**](https://github.com/Harirajhari/Your-muisc/releases/latest/download/YourMusic-v4.3.1-release.apk) | Direct APK installation file |
+| **All Releases & Changes** | [**Browse GitHub Releases**](https://github.com/Harirajhari/Your-muisc/releases/latest) | Full release notes & checksums |
+| **GitHub Actions Artifacts** | [**Download via Actions**](https://github.com/Harirajhari/Your-muisc/actions) | Latest automated build artifacts |
 
 ---
 

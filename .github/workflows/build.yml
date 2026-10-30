@@ -11,6 +11,8 @@ jobs:
   build:
     name: Build Your Music APK
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     env:
       SIGNING_KEY: ${{ secrets.SIGNING_KEY }}
       ADDON_CLIENT_SECRET: ${{ secrets.ADDON_CLIENT_SECRET }}
@@ -86,3 +88,23 @@ jobs:
           name: YourMusic-v${{ steps.prep_apk.outputs.version }}-APK
           path: final_apk/*
           if-no-files-found: error
+
+      - name: Publish to GitHub Release
+        if: github.ref == 'refs/heads/main'
+        uses: softprops/action-gh-release@3bb12739c298aeb8a4eeaf626c5b8d85266b0e65 # v2
+        with:
+          tag_name: v${{ steps.prep_apk.outputs.version }}
+          name: "Your Music v${{ steps.prep_apk.outputs.version }}"
+          body: |
+            ### 🎵 Your Music v${{ steps.prep_apk.outputs.version }}
+            - Spotify-inspired theme (Dark AMOLED & Spotify Green)
+            - No login or sign-up required (Instant streaming)
+            - Ad-free YouTube Music engine + Lossless audio
+            - Millisecond-synced lyrics & offline downloads
+          files: |
+            final_apk/*.apk
+            final_apk/SHA256SUMS.txt
+          draft: false
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
